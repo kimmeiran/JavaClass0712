@@ -1,0 +1,16 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+class test{
+ public void f() throws Exception{
+ FileReader fReader = new FileReader("c:/workplace/JavaClass0712/src/order.txt");
+ BufferedReader bReader = new BufferedReader(fReader);
+ String str = null;
+ while((str = bReader.readLine())!= null){ 
+  String[] tmp = str.split("，"); 
+  System.out.println(tmp[1]);  
+ }
+ bReader.close(); 
+  test a = new test();
+  a.f();
+ }
+}
